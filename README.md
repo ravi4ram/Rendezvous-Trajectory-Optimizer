@@ -55,17 +55,31 @@ where Ad and Bd matrix is given by
 
 ### Input Data    
 Chaser (SDX01) and Target (SDX02) state vectors are derived using the TLEs.  
-
-SDX01                   
-1 62459U 24253A   25007.29615164  .00010751  00000+0  35525-3 0  9996     
-2 62459  54.9972 223.7291 0008088 313.4583  46.5768 15.31925325  1161      
-&nbsp;    
-SDX02                   
-1 62460U 24253B   25007.62238957  .00009572  00000+0  31751-3 0  9992     
-2 62460  54.9967 222.2754 0008152 314.6307  45.4052 15.31933703  1213    
    
 &nbsp;    
-#### Remember this is a target centered coordinate frame and the chaser state vectors should be in relative to target
+#### Remember this is a target centered coordinate frame and the chaser state vectors should be in relative to target   
+
+&nbsp;   
+SDX01                   
+    1 62459U 24253A   25008.79683239  .00011543  00000+0  38008-3 0  9999      
+    2 62459  54.9969 217.0426 0008268 317.7465  42.2923 15.31962301  1395     
+    
+&nbsp;    
+position vector    = [-705.14, -4786.08, 4848.59] km     
+velocity vector    = [6.59, 2.21, 3.15] km/s      
+&nbsp;    
+
+SDX02                   
+    1 62460U 24253B   25008.79683218  .00012021  00000+0  39528-3 0  9998       
+    2 62460  54.9968 217.0426 0008268 317.7897  42.2491 15.31963181  1392     
+&nbsp;     
+position vector    = [-704.38, -4785.83, 4848.94] km      
+velocity vector    = [6.59, 2.21, 3.15] km/s     
+
+&nbsp;   
+Program state vector inputs in target centric co-ordinates:    
+target :  [0.,0.,0.,0.,0.,0.]   
+chaser :  [-762.15, -251.75, -350.66, -0.11, -0.68, 0.70]  
 
 &nbsp;     
 ### Convex Optimization    
@@ -76,8 +90,8 @@ Used CLARABEL solver for this problem.
 ## Setup
 Script is written with python (Version: 3.6) on linux. Additional modules required :   
 
-* numpy  (tested with Version: 1.18.4 )
-* matplotlib  (tested with Version: 2.1.1 )
+* numpy  (tested with Version: 1.21.5 )
+* matplotlib  (tested with Version: 3.5.1 )
 * CVXPY (tested with Version: 1.6)
 
 ## How to run   
