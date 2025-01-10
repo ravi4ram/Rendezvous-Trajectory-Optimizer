@@ -47,10 +47,9 @@ def estimate():
     # print(x0_target)
 
     # Chaser Spacecraft # initial position in target center coordinate frame
-    x0 = np.array([-10103.780725584133, 19588.531139346305, 16220.16171565,
-                   85.37754802465861, -89.64878002435307, -94.88549429088607])
+    x0 = np.array([-762.1498546416406, -251.7530468199402, -350.6644421033561,
+                   -0.10886778379790485, -0.6783786711143875, 0.6912548280065494])
 
-    
     # mass of the satellite (kg)
     m = 220.0 # kg
     # Thrusters: 1N (9 Nos)
@@ -67,8 +66,8 @@ def estimate():
     # control inputs (Fx, Fy, Fz)
     nu = 3
 
-    # for 4 minutes control points
-    N = (60 * 4) + 1    
+    # for 2 minutes control points
+    N = (60 * 2) + 1    
     # timestep (seconds)
     dt = 1
       
